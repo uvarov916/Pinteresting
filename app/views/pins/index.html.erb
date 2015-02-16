@@ -12,7 +12,7 @@
         <strong><%= pin.user.name if pin.user %></strong>
       </div>
 
-      <% if pin.user == current_user %> 
+      <% if current_user && pin.user == current_user %> 
         <div class="panel-footer">
           <div class="actions">
             <%= link_to edit_pin_path(pin) do %>
